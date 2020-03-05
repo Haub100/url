@@ -86,3 +86,4 @@ gyms.cr 3
 - Use an AVL to hold the items
 - Add page frequency records
 - Handle other signals
+- Cunit testing for modules
