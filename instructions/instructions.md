@@ -26,11 +26,17 @@ User interaction: | `ALL` will display all root domains with sub pages underneat
 |                 |(Note: CTRL-d will cancel user input session and close program)
 File structure: | <pre>../<br>└── project<br>  ├── Makefile<br>  ├── README.md<br>  ├── bin/<br>  ├── doc/<br>  ├── include/<br>  ├── obj/<br>  ├── resource/<br>  ├── src/<br>  └── test/</pre>
 No memory leaks | Use valgrind
-Assume case insensitivity |
+Assumptions | Assume case insensitivity |
+URLS | URLs will be generated using the urlGenny provided |
+|    | ./urlGenny.py 5 : will generate 5 urls |
+|    | ./urlGenny.py 100 2 : will generate 100 urls with a 1 in 2 chance of being a duplicate URL |
+|    | ./urlGenny.py 100 100 : will generate 100 urls with a 1 in 100 chance of being a duplicate |
+
 ------------
 
 ## Examples:
 ```bash
+# ./urlgenny.py 5 >> resource/.urls
 cat resource/.urls
 https://pikachu.pom/daily.html
 http://gyms.cr/gym_list.htm
