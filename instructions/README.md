@@ -80,3 +80,9 @@ gyms.cr 3
 > - Subdomains of a root are different root domains:
 >    <div>ww<span>w.</span>root.com != root.com</div>
 > - All urls will end in `.pom`, `.pedu`, and `.porg`
+
+## Features for challenges
+- Allow for sorting in the command line on the fly
+- Use an AVL to hold the items
+- Add page frequency records
+- Handle other signals
