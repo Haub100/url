@@ -98,7 +98,10 @@ int main(int argc, char **argv){
         printf("Select:> ");
         fgets(input, 30, stdin);
 
-        input[strcspn(input, "\n")] = 0; //remove trailing newline
+        if(strstr(input, "\n") == NULL){
+            int c; while((c = getchar()) != '\n' && c != EOF){ } //clear stdin if there is extra
+        }
+        input[strcspn(input, "\n")] = 0; //remove trailing newline        
 
         if(strncmp(input, "exit", 30) == 0 || strncmp(input, "EXIT", 30) == 0 
             || strncmp(input, "quit", 30) == 0 || strncmp(input, "QUIT", 30) == 0){

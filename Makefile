@@ -19,5 +19,3 @@ build:
 .PHONY: clean
 clean:
 	rm -rf $(BIN)
-	rm -rf $(RSRC)
-	@mkdir -p $(RSRC)
