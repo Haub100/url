@@ -29,7 +29,7 @@ static struct option gLongOptions[] = {
 int main(int argc, char **argv){
     int option_char = 0;
     int rflg = 0, fflg = 0, Fflg=0, errflg = 0;
-    char *file = "resource/.urls";
+    const char *file = "resource/.urls";
 
     while ((option_char = getopt_long(argc, argv, "rfFh", gLongOptions, NULL)) != -1){
         switch (option_char)
@@ -103,8 +103,7 @@ int main(int argc, char **argv){
         }
         input[strcspn(input, "\n")] = 0; //remove trailing newline        
 
-        if(strncmp(input, "exit", 30) == 0 || strncmp(input, "EXIT", 30) == 0 
-            || strncmp(input, "quit", 30) == 0 || strncmp(input, "QUIT", 30) == 0){
+        if(strncasecmp(input, "exit", 30) == 0 || strncasecmp(input, "quit", 30) == 0){
             fprintf(stdout, "Quitting program... Have a wonderful day!\n");
             exit(0);
         }
